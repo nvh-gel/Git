@@ -37,6 +37,8 @@ gem 'redcarpet'
 
 gem 'coffee-script-source', '1.8.0'
 
+gem 'rails_12factor', group: 'production'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
