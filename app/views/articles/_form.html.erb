@@ -11,15 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
   </div>
-  <div class="field">
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
+  <div class="form-group">
+    <%= f.label :body %>
+    <%= f.text_area :body, class: 'form-control', :rows => '15' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Submit', :class => 'btn btn-success' %>
+    <%= 
+    if (action_name == 'edit')
+      link_to 'Show', @article, :class => 'btn btn-info'
+    end;
+    %>
+    <%= link_to 'Back', articles_path, :class => 'btn btn-primary' %>
   </div>
 <% end %>
